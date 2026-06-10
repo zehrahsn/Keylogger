@@ -1,7 +1,8 @@
 # Keylogger
-Malware Creation and Detection Evasion Analysis
+Malware Creation and Detection Evasion Analysis 
 
 The complete per-version breakdown TI tool's (Virustotal. Any.run, HybridAnalysis) raw output, indicators, and MITRE mappings is available in the full [report](https://medium.com/@hasanovazehra24/detection-evasion-in-malware-what-security-platforms-miss-327f09ff9d33?postPublishedType=repub) 
+###PASSWORD to extract 7zip file: **Cyberslayers**
 
 The lab investigates how different file transformations affect detection results, including plain Python source code, obfuscated Python code, compiled executables, compressed executables, and encrypted archives.
 
@@ -44,7 +45,7 @@ The third version was `compiled.exe`. In this stage, the Python script was conve
 
 The fourth version was `compressed.exe`. This version was created by taking the compiled `.exe` file and compressing it with **UPX**, which stands for Ultimate Packer for eXecutables. UPX reduces the file size and wraps the executable in a packed format. In simple terms, the program is still an executable, but its internal structure is compressed. This can make static analysis harder because security tools may need to unpack the file before they can properly inspect it. This version was used to see how packing and compression affect malware detection results.
 
-The final version was `enc.exe`. This version placed the executable inside a password-protected encrypted archive using 7-Zip. In simple words, the file was locked inside an archive, and the content could not be fully inspected without the correct password. Because of this, security platforms may only see the outer archive instead of the actual executable inside it. This version was used to test how encryption affects static and dynamic analysis, especially when analysis tools cannot automatically extract the protected file.
+The final version was `enc.7z`. This version placed the executable inside a password-protected encrypted archive using 7-Zip. In simple words, the file was locked inside an archive, and the content could not be fully inspected without the correct password. Because of this, security platforms may only see the outer archive instead of the actual executable inside it. This version was used to test how encryption affects static and dynamic analysis, especially when analysis tools cannot automatically extract the protected file. 
 
 Overall, the lab compared five stages of the same sample: plain Python source code, obfuscated Python source code, PyInstaller-compiled executable, UPX-compressed executable, and password-protected 7-Zip archive. This helped show how each transformation changes what security tools can see and how confidently they can detect suspicious behavior.
 
