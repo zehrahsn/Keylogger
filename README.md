@@ -21,3 +21,8 @@ Evidence collected during this stage included:
  - Listener receiving encoded image data
  - Successfully decoded VM desktop screenshot
 <img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/b6e17ea2-0913-4299-956a-42277f088dc6" />
+
+##Ethical Disclaimer
+This project is for educational and defensive cybersecurity research only.
+All testing was performed in a controlled and isolated virtual machine environment. The purpose of this work is to understand malware detection, sandbox analysis, and defensive security techniques.
+This project must not be used to attack, monitor, infect, or collect data from any real user, system, or network without explicit authorization.
